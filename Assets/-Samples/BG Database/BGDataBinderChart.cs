@@ -16,7 +16,7 @@ public class BGDataBinderChart : MonoBehaviour
 
     void readData()
     {
-        Debug.LogWarning("데이타 읽기 완료 ==> " + json);
+        Debug.LogWarning("json ==> " + json);
     }
 
 

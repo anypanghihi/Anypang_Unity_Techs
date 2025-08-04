@@ -46,8 +46,8 @@ public partial class RealmDaseHandler : MonoBehaviour
 
 
 #if UNITY_EDITOR
-            Realm.DeleteRealm(configL); // �׽�Ʈ�Ҷ��� ������ Ȱ��ȭ�ؼ� �����ϰ� ����.
-            Realm.DeleteRealm(configN); // �׽�Ʈ�Ҷ��� ������ Ȱ��ȭ�ؼ� �����ϰ� ����.
+            Realm.DeleteRealm(configL);
+            Realm.DeleteRealm(configN);
 # endif
             realmL = Realm.GetInstance(configL);
             realmN = Realm.GetInstance(configN);
@@ -268,6 +268,6 @@ public partial class RealmDaseHandler : MonoBehaviour
 
     async UniTaskVoid InsertNetworkDBDataProcess()
     {
-
+        await UniTask.Yield();
     }
 }

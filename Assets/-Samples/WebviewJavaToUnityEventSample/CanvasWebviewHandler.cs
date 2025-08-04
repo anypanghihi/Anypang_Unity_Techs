@@ -12,7 +12,7 @@ public class CanvasWebViewHandler : MonoBehaviour
 
     void Start()
     {
-        // WebViewê°€ ì¤€ë¹„ë  ë•Œê¹Œì§€ ê¸°ë‹¤ë ¸ë‹¤ê°€ ë¡œë“œ
+        // WebView°¡ ÁØºñµÉ ¶§±îÁö ±â´Ù·È´Ù°¡ ·Îµå
         //_canvasWebViewPrefab.Initialized += OnWebViewInitialized;
 
         SetWebViewDownloadAsync().Forget();
@@ -23,14 +23,14 @@ public class CanvasWebViewHandler : MonoBehaviour
     private void OnWebViewInitialized(object sender, System.EventArgs e)
     {
         _canvasWebViewPrefab.WebView.MessageEmitted += WebView_MessageEmitted;
-        //_canvasWebViewPrefab.WebView.LoadUrl("http://192.168.66.1:5500/Assets/-Samples/WebviewJavaToUnityEventSample/TestPage.html"); // HTML íŒŒì¼ ê²½ë¡œ
+        //_canvasWebViewPrefab.WebView.LoadUrl("http://192.168.66.1:5500/Assets/-Samples/WebviewJavaToUnityEventSample/TestPage.html"); // HTML ÆÄÀÏ °æ·Î
     }
 
     private void WebView_MessageEmitted(object sender, EventArgs<string> e)
     {
         Debug.Log("Received message from JavaScript: " + e.Value);
 
-        // ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸ ê°ì§€
+        // ¹öÆ° Å¬¸¯ ÀÌº¥Æ® °¨Áö
         if (e.Value.Contains("buttonClicked"))
         {
             OnButtonClicked();
@@ -78,7 +78,6 @@ public class CanvasWebViewHandler : MonoBehaviour
 
         //         string destinationFile = ZString.Concat(destinationFolder, Path.DirectorySeparatorChar, Path.GetFileNameWithoutExtension(eventArgs.FilePath), Path.GetExtension(eventArgs.FilePath));
 
-        //         // 'download' ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         //         if (!Directory.Exists(destinationFolder))
         //         {
         //             Directory.CreateDirectory(destinationFolder);
@@ -86,7 +85,6 @@ public class CanvasWebViewHandler : MonoBehaviour
 
         //         Debug.Log(destinationFile);
 
-        //         // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
         //         File.Move(eventArgs.FilePath, destinationFile);
         //     }
         // };

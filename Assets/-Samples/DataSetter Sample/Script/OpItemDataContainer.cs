@@ -27,7 +27,6 @@ namespace Sample.OPDataSetter
             OpItemBundleData[] bundlelist = GetComponentsInChildren<OpItemBundleData>();
 
 
-            // OpItemData �� ���, ���Ŀ� HomeData �� ��� ������ ������ �Ѵ�.
             foreach (OpItemBundleData item in bundlelist)
             {
                 OpBundleList.Add(item.Bundle.id, item);

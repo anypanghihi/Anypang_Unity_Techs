@@ -29,7 +29,6 @@ namespace Sample.Dashboard
 
         void OnEnableSignal()
         {
-            // 해당 Stream 에 대해서 연결 및 해제를 해야 한다.
             SigStream[(int)DashboardCategory.TimeGraph].ConnectReceiver(SigReceiver[(int)DashboardCategory.TimeGraph]);
             SigStream[(int)DashboardCategory.SPCGraph].ConnectReceiver(SigReceiver[(int)DashboardCategory.SPCGraph]);
             SigStream[(int)DashboardCategory.BarcodeChart].ConnectReceiver(SigReceiver[(int)DashboardCategory.BarcodeChart]);
@@ -37,7 +36,6 @@ namespace Sample.Dashboard
 
         void OnDisableSignal()
         {
-            // 해당 Stream 에 대해서 연결 및 해제를 해야 한다.
             SigStream[(int)DashboardCategory.TimeGraph].DisconnectReceiver(SigReceiver[(int)DashboardCategory.TimeGraph]);
             SigStream[(int)DashboardCategory.SPCGraph].DisconnectReceiver(SigReceiver[(int)DashboardCategory.SPCGraph]);
             SigStream[(int)DashboardCategory.BarcodeChart].DisconnectReceiver(SigReceiver[(int)DashboardCategory.BarcodeChart]);
