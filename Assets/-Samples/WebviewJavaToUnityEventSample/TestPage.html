@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebView Test Page</title>
+    <script>
+      // Unity로 메시지 보내기
+      function sendMessageToUnity() {
+        if (window.vuplex) {
+          window.vuplex.postMessage("buttonClicked");
+        } else {
+          console.log("Vuplex WebView not detected.");
+        }
+      }
+
+      // Google Sheets 다운로드 (Excel 형식)
+      function downloadGoogleSheet() {
+        const link = document.createElement("a");
+        link.href =
+          "https://docs.google.com/spreadsheets/d/1Xenu_lDHUWJnsKkRdgCtM1v5Ach2zMHn/export?format=xlsx"; // 원하는 포맷 가능 (csv, pdf 등)
+        link.target = "_blank"; // 새 탭에서 열기 (필요하면 제거 가능)
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>WebView Test Page</h2>
+
+    <!-- Unity와 통신하는 버튼 -->
+    <button onclick="sendMessageToUnity()">Send Message to Unity</button>
+
+    <!-- Google Sheets 다운로드 버튼 -->
+    <button onclick="downloadGoogleSheet()">
+      Download Google Sheet (Excel)
+    </button>
+  </body>
+</html>

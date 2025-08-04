@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3564e1a7f0b7bd48be3ab0754ca6eef, type: 3}
+  m_Name: OP20
+  m_EditorClassIdentifier: 
+  id: 20
+  Items:
+  - Show: 1
+    TaskID: OP20_FaAirPress_Average
+    OPID: 20
+    BoxType: 0
+    HasDashboard: 0
+    DashboardCategory: 0
+    APILink: 
+    ProcessName: "\uBA54\uC778 AIR \uD3C9\uADE0 \uC555\uB825"
+    ProcessFormat: '{0:N2}'
+    ProcessUnit: bar
+    ProcessScale: 1
+    HasSPEC: 1
+    MinSPECValue: 4
+    MaxSPECValue: 6
+  - Show: 1
+    TaskID: OP20_LineStateNgCount_Real
+    OPID: 20
+    BoxType: 1
+    HasDashboard: 1
+    DashboardCategory: 1
+    APILink: 
+    ProcessName: "\uC870\uB9BD NG \uC218\uB7C9(\uC77C\uD569\uACC4)"
+    ProcessFormat: '{0:N0}'
+    ProcessUnit: 
+    ProcessScale: 1
+    HasSPEC: 0
+    MinSPECValue: 0
+    MaxSPECValue: 0
+  - Show: 1
+    TaskID: OP20_ProdDist
+    OPID: 20
+    BoxType: 0
+    HasDashboard: 1
+    DashboardCategory: 2
+    APILink: 
+    ProcessName: "\uAC15\uC555 \uAC70\uB9AC \uCE21\uC815\uCE58"
+    ProcessFormat: '{0:N2}'
+    ProcessUnit: mm
+    ProcessScale: 0.01
+    HasSPEC: 1
+    MinSPECValue: 100
+    MaxSPECValue: 250
+  - Show: 1
+    TaskID: OP20_ProdPress
+    OPID: 20
+    BoxType: 0
+    HasDashboard: 1
+    DashboardCategory: 2
+    APILink: 
+    ProcessName: "\uAC15\uC555 \uD558\uC911 \uCE21\uC815\uCE58"
+    ProcessFormat: '{0:N2}'
+    ProcessUnit: kg
+    ProcessScale: 0.01
+    HasSPEC: 1
+    MinSPECValue: 0
+    MaxSPECValue: 60

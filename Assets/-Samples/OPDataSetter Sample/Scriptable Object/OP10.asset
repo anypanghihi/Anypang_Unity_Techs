@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3564e1a7f0b7bd48be3ab0754ca6eef, type: 3}
+  m_Name: OP10
+  m_EditorClassIdentifier: 
+  id: 10
+  Items:
+  - Show: 1
+    TaskID: OP10_FaAirPress_Average
+    OPID: 10
+    BoxType: 0
+    HasDashboard: 0
+    DashboardCategory: 0
+    APILink: 0
+    ProcessName: "\uBE44\uC804\uAC80\uC0AC AIR \uC555\uB825(\uC77C\uD3C9\uADE0)"
+    ProcessFormat: '{0:N2}'
+    ProcessUnit: bar
+    ProcessScale: 1
+    HasSPEC: 1
+    MinSPECValue: 4
+    MaxSPECValue: 6
+  - Show: 1
+    TaskID: OP10_LineStateNgCount1_Real
+    OPID: 10
+    BoxType: 1
+    HasDashboard: 1
+    DashboardCategory: 1
+    APILink: 0
+    ProcessName: "\uBE44\uC804\uAC80\uC0AC (\uC88C NG\uC218\uB7C9)"
+    ProcessFormat: '{0:N0}'
+    ProcessUnit: 
+    ProcessScale: 1
+    HasSPEC: 0
+    MinSPECValue: 0
+    MaxSPECValue: 0
+  - Show: 1
+    TaskID: OP10_LineStateNgCount2_Real
+    OPID: 10
+    BoxType: 1
+    HasDashboard: 1
+    DashboardCategory: 1
+    APILink: 0
+    ProcessName: "\uBE44\uC804\uAC80\uC0AC (\uC6B0 NG\uC218\uB7C9)"
+    ProcessFormat: '{0:N0}'
+    ProcessUnit: 
+    ProcessScale: 1
+    HasSPEC: 0
+    MinSPECValue: 0
+    MaxSPECValue: 0
+  - Show: 1
+    TaskID: OP10_ProdJud1
+    OPID: 10
+    BoxType: 1
+    HasDashboard: 0
+    DashboardCategory: 0
+    APILink: 0
+    ProcessName: "\uBE44\uC804 \uAC80\uC0AC (\uC88C)"
+    ProcessFormat: "1:\uC591\uD488,2:\uBD88\uB7C9"
+    ProcessUnit: 
+    ProcessScale: 1
+    HasSPEC: 0
+    MinSPECValue: 0
+    MaxSPECValue: 0
+  - Show: 1
+    TaskID: OP10_ProdJud2
+    OPID: 10
+    BoxType: 1
+    HasDashboard: 0
+    DashboardCategory: 0
+    APILink: 
+    ProcessName: "\uBE44\uC804 \uAC80\uC0AC (\uC6B0)"
+    ProcessFormat: "1:\uC591\uD488,2:\uBD88\uB7C9"
+    ProcessUnit: 
+    ProcessScale: 1
+    HasSPEC: 0
+    MinSPECValue: 0
+    MaxSPECValue: 0
