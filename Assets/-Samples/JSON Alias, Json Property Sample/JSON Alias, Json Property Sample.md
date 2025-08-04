@@ -66,4 +66,4 @@ PlayerData player = JsonHelper.DeserializeWithAlias<PlayerData>(jsonString);
 
 ## 기타
 
-- 실무에서 다양한 외부 데이터 포맷을 통합 처리해야 하는 상황에 최적화된 구조로, 확장성과 유지보수성을 효과적으로 어필할 수
+- 실무에서 다양한 외부 데이터 포맷을 통합 처리해야 하는 상황에 최적화된 구조로, 확장성과 유지보수성을 효과적으로 어필할 수 있는 포트폴리오용 데모입니다.

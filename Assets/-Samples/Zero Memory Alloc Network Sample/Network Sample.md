@@ -55,4 +55,4 @@ private async UniTask<NetworkResult> SendWebRequestAsync(NetworkRequest request)
 
 ## 기타
 
-- 유니티 네트워크 통신에서 메모리를 할당하지 않고 데이터 파싱 관리
+- 유니티 네트워크 통신에서 메모리를 할당하지 않고 데이터 파싱에 대한 포트폴리오용 데모입니다.
