@@ -1,12 +1,17 @@
 using Doozy.Runtime.Signals;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Sample.OPDataSetter;
 
 namespace Sample.Dashboard
 {
+    public enum DashboardCategory
+    {
+        None,
+        TimeGraph = 0,
+        SPCGraph = 1,
+        BarcodeChart = 2,
+        Count = 3
+    }
+    
     public partial class DashboardManager //.Signal
     {
         SignalStream[] SigStream;
