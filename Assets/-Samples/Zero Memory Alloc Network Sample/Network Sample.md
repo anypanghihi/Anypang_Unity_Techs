@@ -17,10 +17,6 @@
 - **네트워크 메모리 관리 및 Zero-Allocation**
   - `NetworkMemoryTest`에서 NativeArray<byte>를 직접 활용하여 대용량 데이터 다운로드 시 GC 최소화 및 메모리 효율성 테스트
 
-- **API 데이터 파싱 및 바인딩**
-  - `NetworkManager.Send`에서 JSON 파싱, 데이터 유효성 검사, 리스트/단일 데이터 변환 등 다양한 파싱 패턴 구현
-  - `NetworkManager.Recv`에서 실제 API 응답을 받아 Dictionary에 바인딩, UI(TextMeshPro)에 실시간 출력
-
 - **실제 업무 패턴 반영**
   - 요청 큐 관리, 우선순위, 재시도, 에러 핸들링, 콜백 구조 등 실무에서 자주 쓰이는 네트워크 패턴 적용
   - 다양한 API 응답 포맷 대응 및 데이터 바인딩 구조
@@ -51,32 +47,12 @@ private async UniTask<NetworkResult> SendWebRequestAsync(NetworkRequest request)
 }
 ```
 
-```csharp
-// API 응답 파싱 및 데이터 바인딩
-private void GetOpDataWithJSON<T>(string key, string jsonData)
-{
-    if (jsonData != null)
-    {
-        string value = ParseData<T>(jsonData);
-        if (opDataDictionary.ContainsKey(key))
-            opDataDictionary[key] = value;
-        else
-            opDataDictionary.Add(key, value);
-    }
-}
-```
-
 ## 폴더 구조 및 주요 파일
 
-- `Scene/`
-  - `Network Sample Scene.unity` : 네트워크 샘플 메인 씬
-  - `Network Memory Test Scene.unity` : 대용량 데이터 다운로드 및 메모리 테스트 씬
-- `Script/`
-  - `NetworkManager.cs`, `NetworkManager.Send.cs`, `NetworkManager.Recv.cs` : 네트워크 요청/응답, 데이터 파싱, 바인딩 등 메인 매니저
-  - `NetworkRequest.cs`, `NetworkResult.cs` : 네트워크 요청/응답 구조화 클래스
-  - `NetworyMemoryTest.cs` : 대용량 데이터 다운로드 및 메모리 테스트
-- `Scriptable Object/` : 네트워크 관련 ScriptableObject 리소스
+- `Network Memory Test Scene.unity` : 대용량 데이터 다운로드 및 메모리 테스트 씬
+- `NetworkRequest.cs`, `NetworkResult.cs` : 네트워크 요청/응답 구조화 클래스
+- `NetworyMemoryTest.cs` : 대용량 데이터 다운로드 및 메모리 테스트
 
 ## 기타
 
-- 실무에서의 네트워크 통신, 데이터 파싱, 메모리 관리, 비동기 처리 등 다양한 경험을 효과적으로 어필할 수 있는
+- 유니티 네트워크 통신에서 메모리를 할당하지 않고 데이터 파싱 관리
