@@ -35,7 +35,7 @@ namespace Korens.Autonomous.Gamma
 
             valueInputBox.gameObject.SetActive(itemdata.isBindingItem);
 
-            SetDescription(itemdata.ProcessName);
+            SetDescription("dummy description");
             SetSpecData(itemdata);
 
             if (itemdata.HasDashboard)

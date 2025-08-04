@@ -44,7 +44,9 @@ namespace Korens.Autonomous.Ford
 
         public void SetDescription(FordOpItem item)
         {
-            title.text = item.ProcessName;
+            // 데모용 더미 값 입력
+            // title.text = item.ProcessName;
+            title.text = "dummy name";
 
             specMinText.text = item.MinSPECValue.ToString();
             specMaxText.text = item.MaxSPECValue.ToString();

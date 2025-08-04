@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7430408194214539647
 RectTransform:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiplayerInfo: {fileID: 0}
-  OnStartBehaviour: 1
+  OnStartBehaviour: 2
   OnShowCallback:
     EventName: OnShowCallback
     Runners: []
