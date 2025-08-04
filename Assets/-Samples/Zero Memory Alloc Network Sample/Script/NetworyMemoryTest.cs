@@ -10,11 +10,20 @@ namespace Network.ZeroMemoryAllocSample
 {
     public class NetworkMemoryTest : MonoBehaviour
     {
+        private NetworkRequest request;
         private void Start()
         {
-            NetworkRequest request = new NetworkRequest("https://httpbin.org/bytes/1048576", 1.0f, System.Net.Http.HttpMethod.Get);
+            request = new NetworkRequest("https://httpbin.org/bytes/1048576", 1.0f, System.Net.Http.HttpMethod.Get);
+        }
 
+        public void StartMemAllocTest()
+        {
             StartNetworkMemoryTest(request);
+        }
+
+        public void StartZeroAllocTest()
+        {
+            SendWebRequestAsync_With_ZeroAlloc(request).Forget();
         }
 
         private async void StartNetworkMemoryTest(NetworkRequest request)
@@ -30,6 +39,12 @@ namespace Network.ZeroMemoryAllocSample
             }
         }
 
+        /// <summary>
+        /// 일반적인 비동기 유니티의 네트워크 리퀘스트 과정
+        /// 핸들러를 통해 리스폰스에 접근하는 과정에 메모리를 할당한다.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private async UniTask<NetworkResult> SendWebRequestAsync(NetworkRequest request)
         {
             if (request == null)
@@ -83,6 +98,12 @@ namespace Network.ZeroMemoryAllocSample
             }
         }
 
+        /// <summary>
+        /// NativeArray<byte>를 사용하여 메모리 할당을 최소화하는 비동기 유니티의 네트워크 리퀘스트 과정
+        /// 핸들러를 사용하지 않고, NativeArray<byte>를 직접 반환하여 메모리 할당을 줄인다.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private async UniTask<NetworkResult> SendWebRequestAsync_With_ZeroAlloc(NetworkRequest request)
         {
             if (request == null)
