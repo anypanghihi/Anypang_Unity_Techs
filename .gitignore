@@ -10,7 +10,60 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Aa]ssets_TempData/
+/[Gg]PM/
+/[Bb]GDatabaseSettings/
+/[Uu]IElementsSchema/
 *.log
+
+# 회사 리소스 및 대용량 확장자 무시
+*.psd
+*.tga
+*.tif
+*.tiff
+*.png
+*.png.meta
+*.jpg
+*.jpg.meta
+*.jpeg
+*.jpeg.meta
+*.bmp
+*.mp3
+*.wav
+*.ogg
+*.fbx
+*.fbx.meta
+*.obj
+*.obj.meta
+*.blend
+*.c4d
+*.3ds
+*.max
+*.mp4
+*.mov
+*.avi
+*.exr
+*.exr.meta
+*.hdr
+*.ttf
+*.ttf.meta
+*.mat
+*.mat.meta
+/[Aa]ssets/[Gg]raphics
+/[Aa]ssets/[Oo]bjects
+/[Aa]ssets/[Oo]bjects.meta
+/[Aa]ssets/[Pp]ackages
+/[Aa]ssets/[Pp]ackages.meta
+/[Aa]ssets/[Ee]ditor
+/[Aa]ssets/[Ee]ditor.meta
+
+# 어셋 제외
+/[Aa]ssets/[Uu]ntrackedAssets
+/[Aa]ssets/[Uu]ntrackedAssets.meta
+/[Aa]ssets/[Pp]lugins
+/[Aa]ssets/[Rr]esources
+/[Aa]ssets/[Ss]amples
+/[Aa]ssets/[Ss]treamingAssets
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
@@ -33,6 +86,8 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode/
+.vsconfig
 
 # Gradle cache directory
 .gradle/
