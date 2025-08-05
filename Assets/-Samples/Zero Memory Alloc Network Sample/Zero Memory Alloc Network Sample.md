@@ -59,4 +59,4 @@ private async UniTask<NetworkResult> SendWebRequestAsync_With_ZeroAlloc(NetworkR
 
 ## 기타
 
-- Unity 네트워크 통신에서 메모리 할당 없이 대용량 데이터를 효율적으로 처리하는 구조를 효과적으로 어필할 수 있는 포트폴리오용
+- Unity 네트워크 통신에서 메모리 할당 없이 대용량 데이터를 효율적으로 처리하는 구조를 효과적으로 어필할 수 있는 포트폴리오용 데모입니다.
