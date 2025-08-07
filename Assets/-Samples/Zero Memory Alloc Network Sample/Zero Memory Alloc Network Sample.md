@@ -26,6 +26,8 @@
 
 ## 기대 효과
 
+<img width="700" height="500" alt="Image" src="https://github.com/user-attachments/assets/b2007c62-bd79-417a-ac57-da5624b8dc6b"/>
+
 - 대용량 네트워크 데이터 처리 시 GC 최소화 및 메모리 효율성 경험 어필
 - 비동기/병렬 처리, 재시도, 우선순위 등 네트워크 안정성 패턴 경험 강조
 - 구조화된 네트워크 요청/응답 관리 및 유지보수성 높은 코드 설계 역량 강조
